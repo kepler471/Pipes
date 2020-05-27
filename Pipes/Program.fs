@@ -34,6 +34,22 @@ let chooseDir position =
         | 4 -> "d"
         |_ -> position
 
+// Try with vector type?
+type Vector3 = struct
+    val X : float
+    val Y : float
+    val Z : float
+
+    new (x,y,z) = { X = x; Y = y; Z = z }
+
+    override v.ToString() = sprintf "[%f, %f, %f]" v.X v.Y v.Z
+end
+
+/// The following could be used to create vectors:
+///     List.zip, List.iter
+
+//open MathNet
+//let vec = MathNet.Spatial.Euclidean.
 
 /// Infinite sequence random walk
 let rec endlessWalk x = 
